@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSC295HW4
+namespace CS295LinkedLists
 {
     public class MyStack
     {
@@ -20,7 +20,7 @@ namespace CSC295HW4
 
         public Node Pop()
         {
-            return _stack.RemoveFirst();
+            return _stack.DeleteFirst();
         }
     }
 }
