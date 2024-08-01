@@ -14,6 +14,8 @@ namespace CSC295HW4.LinkedList
         
         public Node? Next { get; set; }
 
+
+        public Node? Previous { get; set; }
         public void DisplayNode()
         {
             Console.WriteLine(Data);

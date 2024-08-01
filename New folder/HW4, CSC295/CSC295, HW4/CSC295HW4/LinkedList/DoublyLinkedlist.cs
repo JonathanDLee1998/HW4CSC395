@@ -1,12 +1,13 @@
-﻿using System;
+﻿using CSC295HW4.LinkedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSC295HW4.LinkedList
+namespace CS295LinkedLists
 {
-    public class LinkedList
+    public class DoublyLinkedList
     {
         public Node First { get; set; }
         public Node Last { get; set; }
@@ -19,6 +20,7 @@ namespace CSC295HW4.LinkedList
             newNode.Data = data;
             // Put the old node into Next
             newNode.Next = First;
+            if (First != null) First.Previous = newNode;
             // Make the first the new node
             First = newNode;
 
@@ -31,6 +33,7 @@ namespace CSC295HW4.LinkedList
             Node temp = First;
             // Assign the new head
             First = First.Next;
+            if (First != null) First.Previous = null;
             if (First == null) Last = null;
             return temp;
         }
@@ -52,6 +55,7 @@ namespace CSC295HW4.LinkedList
             Node newNode = new Node();
             newNode.Data = data;
             currentLastNode.Next = newNode;
+            newNode.Previous = currentLastNode;
             Last = newNode;
         }
     }

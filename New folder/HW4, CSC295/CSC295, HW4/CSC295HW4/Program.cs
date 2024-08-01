@@ -14,7 +14,7 @@ class Program
         linkedList.DeleteFirst(1);
         linkedList.DeleteFirst(2);
 
-        linkedList.InsertLast(926);
+        linkedList.InsertLast(876);
         linkedList.InsertLast(348);
 
         linkedList.DisplayList();
